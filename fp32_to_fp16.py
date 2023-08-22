@@ -1,4 +1,4 @@
-from transformers import AutoModel, PushToHubCallback
+from transformers import AutoModel
 
 USERNAME = ""
 TOKEN = ""
