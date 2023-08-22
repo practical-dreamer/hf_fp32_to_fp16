@@ -1,11 +1,11 @@
-from transformers import AutoModel
+from transformers import AutoModel, PushToHubCallback
 
-USERNAME = ""
-TOKEN = ""
-MODEL_PATH = ""
-CACHE_DIR = ""
-NEW_MODEL_DIR = ""
-NEW_MODEL_NAME = ""
+USERNAME = "practical-dreamer"
+TOKEN = "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"
+MODEL_PATH = "deepnight-research/llama-2-70B-inst"
+CACHE_DIR = "/workspace/input"
+NEW_MODEL_DIR = "/workspace/output"
+NEW_MODEL_NAME = "deepnight-research_llama-2-70B-inst-fp16"
 
 # Define printG for print green
 def printG(text):
@@ -24,19 +24,4 @@ model = model.half()
 printG("Conversion complete... Saving")
 model.save_pretrained(NEW_MODEL_DIR)
 
-# Upload to Hugging Face
-printG("fp16 Save complete... Uploading")
-training_args = TrainingArguments(
-    push_to_hub=True,
-    push_to_hub_model_id=f"{USERNAME}/{NEW_MODEL_NAME}",
-    push_to_hub_token=TOKEN,
-)
-
-trainer = Trainer(
-    model=model,
-    args=training_args,
-)
-
-trainer.push_to_hub()
-
-printG("Model uploaded successfully!")
+printG("Model Saving Complete")
