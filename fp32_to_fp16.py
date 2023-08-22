@@ -1,11 +1,11 @@
 from transformers import AutoModel, PushToHubCallback
 
-USERNAME = "practical-dreamer"
-TOKEN = "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"
-MODEL_PATH = "deepnight-research/llama-2-70B-inst"
-CACHE_DIR = "/workspace/input"
-NEW_MODEL_DIR = "/workspace/output"
-NEW_MODEL_NAME = "deepnight-research_llama-2-70B-inst-fp16"
+USERNAME = ""
+TOKEN = ""
+MODEL_PATH = ""
+CACHE_DIR = ""
+NEW_MODEL_DIR = ""
+NEW_MODEL_NAME = ""
 
 # Define printG for print green
 def printG(text):
