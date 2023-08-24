@@ -5,7 +5,6 @@ TOKEN = ""
 MODEL_PATH = ""
 CACHE_DIR = ""
 NEW_MODEL_DIR = ""
-NEW_MODEL_NAME = ""
 
 # Define printG for print green
 def printG(text):
